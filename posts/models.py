@@ -5,7 +5,7 @@ class Posts(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=40)
     message = models.TextField()
-    photoUrl = models.CharField(max_length=200)
+    photoUrl = models.CharField(max_length=200, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
